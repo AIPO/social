@@ -63,6 +63,7 @@
                                            name="password_confirmation" required>
                                 </div>
                             </div>
+
                             <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }}">
                                 <label for="gender" class="col-md-4 control-label">Gender</label>
 

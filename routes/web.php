@@ -17,4 +17,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::group(['middelware' => 'auth'], function () {
+    Route::get('/profile/{id}', 'ProfilesController@index');
+});
+
+Auth::routes();
+
 Route::get('/home', 'HomeController@index')->name('home');
