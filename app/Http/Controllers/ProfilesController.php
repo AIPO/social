@@ -15,7 +15,8 @@ class ProfilesController extends Controller
     public function index($id)
     {
         $user = User::find($id);
-        return response()->json(['user'=>$user]);
+      return view('profiles.profile')->with('user', $user);
+        //  return response()->json(['user'=>$user]);
     }
 
     /**
